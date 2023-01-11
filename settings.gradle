@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "openCV"
+include ':app'
+//define below lines in order to creating a module automatically
+include ':sdk450'
+project(':sdk450').projectDir = new File(sdk450 + '/sdk')
